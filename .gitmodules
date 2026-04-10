@@ -1,3 +1,6 @@
 [submodule "cmake"]
 	path = cmake
 	url = https://github.com/derammo/cmake
+[submodule "examples/cmake"]
+	path = examples/cmake
+	url = https://github.com/derammo/cmake
