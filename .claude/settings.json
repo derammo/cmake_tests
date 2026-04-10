@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json.schemastore.org/claude-code-settings.json",
+    "permissions": {
+        "allow": [
+            "Bash(npm run lint)",
+            "Bash(npm run test *)",
+            "Read(~/.zshrc)",
+            "Bash(sh tests/test_*.sh)",
+            "Bash(make test 2>&1 *)",
+            "Bash(git checkout -b fix/*)",
+            "Bash(git add *)",
+            "Bash(git commit -m *)",
+            "Bash(git push origin fix/*)",
+            "Bash(git push -u origin fix/*)",
+            "Bash(git checkout main)",
+            "Bash(git branch --show-current)",
+            "Bash(git status)",
+            "Bash(gh pr create --repo derammo/cmake *)",
+            "Bash(echo \"exit=$?\")",
+            "Bash(cd /Users/ammo/src/git/cmake_tests*)",
+            "Bash(tail *)",
+            "Bash(grep *)",
+            "Bash(cd /Users/ammo/src/git/cmake_tests && make test 2>&1 | grep -E '^\\[|^==>|^passed')"
+        ],
+        "deny": [
+            "Bash(curl *)",
+            "Read(./.env)",
+            "Read(./.env.*)",
+            "Read(./secrets/**)"
+        ]
+    }
+}
