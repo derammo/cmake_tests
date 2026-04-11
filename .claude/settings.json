@@ -15,12 +15,14 @@
             "Bash(git checkout main)",
             "Bash(git branch --show-current)",
             "Bash(git status)",
-            "Bash(gh pr create --repo derammo/cmake *)",
             "Bash(echo \"exit=$?\")",
             "Bash(cd /Users/ammo/src/git/cmake_tests*)",
             "Bash(tail *)",
             "Bash(grep *)",
-            "Bash(cd /Users/ammo/src/git/cmake_tests && make test 2>&1 | grep -E '^\\[|^==>|^passed')"
+            "Bash(cd /Users/ammo/src/git/cmake_tests && make test 2>&1 | grep -E '^\\[|^==>|^passed')",
+            "Bash(/Users/ammo/.claude/bin/gh-bot pr create *)",
+            "Bash(/Users/ammo/.claude/bin/gh-bot auth status)",
+            "Bash(/Users/ammo/.claude/bin/gh-bot api user)"
         ],
         "deny": [
             "Bash(curl *)",
