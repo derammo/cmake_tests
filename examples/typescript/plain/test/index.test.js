@@ -7,3 +7,8 @@ import { greeting } from "../index.js";
 test("greeting", () => {
 	assert.equal(greeting(), "hello");
 });
+
+// deliberately failing, to show how a node:test failure is reported
+test("deliberate failure", () => {
+	assert.equal(greeting(), "goodbye");
+});

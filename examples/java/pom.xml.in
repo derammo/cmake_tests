@@ -39,6 +39,10 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
+        <configuration>
+          <!-- JUnit XML goes where the cmake build collects it from every test provider -->
+          <reportsDirectory>@CMAKE_BINARY_DIR@/junit/java</reportsDirectory>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
