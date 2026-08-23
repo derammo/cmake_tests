@@ -1,0 +1,22 @@
+{
+	"extends": [
+		"_package_template_version.json"
+	],
+	"name": "@cmake-example/plain",
+	"private": true,
+	"description": "a plain npm package without typescript, tested with the node built-in test runner",
+	"license": "UNLICENSED",
+	"type": "module",
+	"files": [
+		"index.js",
+		"LICENSE.txt"
+	],
+	"exports": {
+		".": {
+			"default": "./index.js"
+		}
+	},
+	"scripts": {
+		"test": "node --test"
+	}
+}

@@ -27,11 +27,23 @@ include("cmake/derammo_gtest.cmake")
 # main logic
 include("cmake/derammo_main.cmake")
 
-# projects added by `make -f cmake/config.make root` based on directories that existed at that time
+# npm workspace support, must be after derammo_main.cmake
+include("cmake/derammo_npm.cmake")
+
+# maven support, must be after derammo_main.cmake; derammo_maven_build() expects
+# the JDK path in JDK and a `jdk` target that provides it, here both are satisfied
+# by the system default javac
+include("cmake/derammo_maven.cmake")
+find_package(Java REQUIRED COMPONENTS Development)
+get_filename_component(DERAMMO_JAVAC "${Java_JAVAC_EXECUTABLE}" REALPATH)
+get_filename_component(DERAMMO_JAVAC_BIN_DIR "${DERAMMO_JAVAC}" DIRECTORY)
+get_filename_component(JDK "${DERAMMO_JAVAC_BIN_DIR}" DIRECTORY)
+add_custom_target(jdk)
+
 # new directories should be added here manually
-add_subdirectory(mylib)
-add_subdirectory(autolib)
-add_subdirectory(hello)
+add_subdirectory(cpp)
+add_subdirectory(typescript)
+add_subdirectory(java)
 
 # override default packaging format for testing on Darwin and other systems without .deb support
 set(CPACK_GENERATOR "TGZ")

@@ -1,0 +1,11 @@
+{
+	"extends": [
+		"_package_template_version.json",
+		"_package_template_typescript.json",
+		"_package_template_jest.json"
+	],
+	"name": "@cmake-example/jestlib",
+	"private": true,
+	"description": "",
+	"license": "UNLICENSED"
+}

@@ -1,0 +1,12 @@
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  css: {
+    // avoid spurious throw/catch in success path
+    postcss: {},
+  },
+  test: {
+    include: ["src/**/*.test.ts", "test/**/*.ts"],
+    exclude: ["**/node_modules/**", "test/fixtures/**", "test/support/**"]
+  },
+});

@@ -1,0 +1,15 @@
+{
+  "allowScripts": {
+    "unrs-resolver@1.12.2": true
+  },
+  "author": "derammo",
+  "name": "@cmake-example/typescript",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "jestlib",
+    "mylib",
+    "plain",
+    "tarball"
+  ]
+}

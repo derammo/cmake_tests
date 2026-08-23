@@ -1,0 +1,21 @@
+{
+  "author": "derammo",
+  "description": "a plain npm package without typescript, tested with the node built-in test runner",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "LICENSE.txt"
+  ],
+  "license": "UNLICENSED",
+  "name": "@cmake-example/plain",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}

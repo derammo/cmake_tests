@@ -1,0 +1,11 @@
+{
+	"extends": [
+		"_package_template_version.json",
+		"_package_template_typescript.json",
+		"_package_template_vitest.json"
+	],
+	"name": "@cmake-example/mylib",
+	"private": true,
+	"description": "",
+	"license": "UNLICENSED"
+}

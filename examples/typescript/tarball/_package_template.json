@@ -1,0 +1,12 @@
+{
+	"extends": [
+		"_package_template_version.json",
+		"_package_template_typescript.json",
+		"_package_template_vitest.json",
+		"_package_template_tarball.json"
+	],
+	"name": "@cmake-example/tarball",
+	"private": true,
+	"description": "",
+	"license": "UNLICENSED"
+}

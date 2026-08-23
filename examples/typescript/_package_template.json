@@ -1,0 +1,10 @@
+{
+	"extends": [
+		"_package_template_version.json"
+	],
+	"name": "@cmake-example/typescript",
+	"private": true,
+	"allowScripts": {
+		"unrs-resolver@1.12.2": true
+	}
+}

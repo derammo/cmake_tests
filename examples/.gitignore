@@ -1,4 +1,5 @@
-Darwin/
-Windows/
-Linux/
-.DS_Store
+/Linux
+/Windows
+/Darwin
+.*.swp
+/java/pom.xml
