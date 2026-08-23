@@ -27,7 +27,7 @@
   "name": "@cmake-example/tarball",
   "private": true,
   "scripts": {
-    "build": "tsc -p tsconfig.build.json && TARBALL=$(npm pack) && ln -sf \"$TARBALL\" \"${TARBALL%-$npm_package_version.tgz}-current.tgz\"",
+    "build": "tsc -p tsconfig.build.json && TARBALL=$(npm pack --quiet) && ln -sf \"$TARBALL\" \"${TARBALL%-$npm_package_version.tgz}-current.tgz\"",
     "build:watch": "tsc -p tsconfig.build.json && tsc -p tsconfig.build.json --watch",
     "check": "tsc --noEmit",
     "check:watch": "tsc --noEmit && tsc --watch --noEmit",
