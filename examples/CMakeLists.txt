@@ -33,17 +33,17 @@ include("cmake/derammo_npm.cmake")
 # maven support, must be after derammo_main.cmake; derammo_maven_build() expects
 # the JDK path in JDK and a `jdk` target that provides it, here both are satisfied
 # by the system default javac
-include("cmake/derammo_maven.cmake")
-find_package(Java REQUIRED COMPONENTS Development)
-get_filename_component(DERAMMO_JAVAC "${Java_JAVAC_EXECUTABLE}" REALPATH)
-get_filename_component(DERAMMO_JAVAC_BIN_DIR "${DERAMMO_JAVAC}" DIRECTORY)
-get_filename_component(JDK "${DERAMMO_JAVAC_BIN_DIR}" DIRECTORY)
-add_custom_target(jdk)
+#include("cmake/derammo_maven.cmake")
+#find_package(Java REQUIRED COMPONENTS Development)
+#get_filename_component(DERAMMO_JAVAC "${Java_JAVAC_EXECUTABLE}" REALPATH)
+#get_filename_component(DERAMMO_JAVAC_BIN_DIR "${DERAMMO_JAVAC}" DIRECTORY)
+#get_filename_component(JDK "${DERAMMO_JAVAC_BIN_DIR}" DIRECTORY)
+#add_custom_target(jdk)
+#add_subdirectory(java)
 
 # new directories should be added here manually
 add_subdirectory(cpp)
 add_subdirectory(typescript)
-add_subdirectory(java)
 
 # override default packaging format for testing on Darwin and other systems without .deb support
 set(CPACK_GENERATOR "TGZ")

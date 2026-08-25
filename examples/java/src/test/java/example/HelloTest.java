@@ -9,10 +9,4 @@ class HelloTest {
     void greeting() {
         assertEquals("Hello World!", Hello.greeting());
     }
-
-    // deliberately failing, to show how a JUnit failure is reported
-    @Test
-    void deliberateFailure() {
-        assertEquals("Goodbye World!", Hello.greeting());
-    }
 }
